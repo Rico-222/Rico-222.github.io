@@ -344,7 +344,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; <span id="spanYear"></span> Rico van Vliet. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p &copy; <span id="copyright-year"></span> Rico van Vliet. <br />Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
@@ -353,7 +353,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script>	$('#spanYear').html(new Date().getFullYear()); </script>
+			<script>	 document.getElementById('copyright-year').textContent = new Date().getFullYear(); </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
