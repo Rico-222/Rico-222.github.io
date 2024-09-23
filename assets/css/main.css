@@ -1820,6 +1820,50 @@ a.primary:hover {
 
 
 
+/* Menu container */
+.menu {
+	display: flex;
+	justify-content: center; /* Zorgt ervoor dat de knoppen in het midden zijn */
+	align-items: center;
+	width: 100%; /* Zorg ervoor dat de knoppen de volledige breedte van het venster vullen */
+	border: 1px solid transparent; /* Dit voorkomt dat het 'verspringt' door de flexbox-berekeningen */
+}
+
+.menu-item {
+	flex: 1; /* Laat elke knop evenveel ruimte innemen */
+	text-align: center; /* Centreer de tekst */
+	padding: 10px 20px;
+	color: #ffffff; /* Kleur van de tekst */
+	text-decoration: none; /* Verwijder de standaard onderlijning van links */
+	border-left: 1px solid #ffffff; /* Voeg de scheidingslijn aan de linkerkant toe */
+	transition: background-color 0.3s ease; /* Voeg een overgangseffect toe voor de achtergrondkleur */
+	position: relative; /* Nodig voor pseudo-elementen zoals ::before en ::after */
+	box-sizing: border-box; /* Zorgt ervoor dat padding en borders worden meegeteld */
+}
+
+.menu-item:first-child {
+	border-left: none; /* Verwijder de scheidingslijn voor de eerste knop */
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.1); /* Verander de achtergrondkleur bij hover voor visuele feedback */
+	cursor: pointer;
+}
+
+.menu-item:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background-color: #ffffff; /* Voeg een lijn tussen de knoppen toe */
+}
+
+.menu-item:last-child:after {
+	display: none; /* Verwijder de lijn na de laatste knop */
+}
+
 
 /* Footer */
 
