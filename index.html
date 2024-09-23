@@ -12,6 +12,14 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
 
 	</head>
 	<body class="is-preload">
@@ -42,28 +50,6 @@
 							</ul>
 						</nav>
 					</header>
-
-				<script>
-					window.onload = function() {
-						// Stel je geboortedatum in (bijvoorbeeld 1990-05-15)
-						const geboorteDatum = new Date('2003-06-11');
-
-						// Haal de huidige datum op
-						const vandaag = new Date();
-
-						// Bereken het verschil in jaren
-						let leeftijd = vandaag.getFullYear() - geboorteDatum.getFullYear();
-
-						// Controleer of de verjaardag dit jaar al is geweest
-						const maandVerschil = vandaag.getMonth() - geboorteDatum.getMonth();
-						if (maandVerschil < 0 || (maandVerschil === 0 && vandaag.getDate() < geboorteDatum.getDate())) {
-							leeftijd--;
-						}
-
-						// Plaats de berekende leeftijd in het span-element
-						document.getElementById('leeftijd').textContent = leeftijd;
-					}
-				</script>
 
 				<!-- Main -->
 					<div id="main">
@@ -180,18 +166,19 @@
 								<div class="timeline">
 									<!-- Educatie sectie -->
 									<div class="timeline-item">
-										<h2>Educatie</h2>
+										<h2>Opleidingen</h2>
 										<div class="content">
 											<p><strong>HBO Bachelor Engineering</strong></p>
 											<p>HZ University of Applied Sciences</p>
 											<p>Afstudeerrichting Product Engineer</p>
 											<p>Periode: 2021 - 2025</p>
-										</div>
-										<!--<div class="content">
+											<div>
 											<p><strong>Middelbare school</strong></p>
-											<p>Naam school of universiteit</p>
-											<p>Periode: 2019 - 2022</p>
-										</div> -->
+											<p>HZ University of Applied Sciences</p>
+											<p>(Vak)Havo, Profiel Natuur & Techniek</p>
+											<p>Periode: 2015 - 2020</p>
+										</div>
+
 									</div>
 
 									<!-- Werkervaring/Stages sectie -->
@@ -503,6 +490,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<div id="bg"></div>
 
 		<!-- Scripts -->
+
+		<script>
+			window.onload = function() {
+				// Stel je geboortedatum in (bijvoorbeeld 1990-05-15)
+				const geboorteDatum = new Date('2003-06-11');
+
+				// Haal de huidige datum op
+				const vandaag = new Date();
+
+				// Bereken het verschil in jaren
+				let leeftijd = vandaag.getFullYear() - geboorteDatum.getFullYear();
+
+				// Controleer of de verjaardag dit jaar al is geweest
+				const maandVerschil = vandaag.getMonth() - geboorteDatum.getMonth();
+				if (maandVerschil < 0 || (maandVerschil === 0 && vandaag.getDate() < geboorteDatum.getDate())) {
+					leeftijd--;
+				}
+
+				// Plaats de berekende leeftijd in het span-element
+				document.getElementById('leeftijd').textContent = leeftijd;
+			}
+		</script>
+
 			<script>	 document.getElementById('copyright-year').textContent = new Date().getFullYear(); </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
