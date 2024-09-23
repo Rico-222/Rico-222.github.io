@@ -43,18 +43,42 @@
 						</nav>
 					</header>
 
+				<script>
+					window.onload = function() {
+						// Stel je geboortedatum in (bijvoorbeeld 1990-05-15)
+						const geboorteDatum = new Date('2003-06-11');
+
+						// Haal de huidige datum op
+						const vandaag = new Date();
+
+						// Bereken het verschil in jaren
+						let leeftijd = vandaag.getFullYear() - geboorteDatum.getFullYear();
+
+						// Controleer of de verjaardag dit jaar al is geweest
+						const maandVerschil = vandaag.getMonth() - geboorteDatum.getMonth();
+						if (maandVerschil < 0 || (maandVerschil === 0 && vandaag.getDate() < geboorteDatum.getDate())) {
+							leeftijd--;
+						}
+
+						// Plaats de berekende leeftijd in het span-element
+						document.getElementById('leeftijd').textContent = leeftijd;
+					}
+				</script>
+
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Intro -->
+						<!-- Over mij -->
 							<article id="intro">
 								<h2 class="major">Over mij</h2>
 								<span class="image main"><img src="images/jouw-foto.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<p>Hallo! Wat leuk dat u mijn portfolio bekijkt. Mijn naam is Rico van Vliet en ik ben <span id="leeftijd"></span> jaar oud. Ik woon in Middelburg en studeer momenteel Product Engineering aan de HZ University of Applied Sciences.</p>
+								<p>In mijn vrije tijd houd ik mij bezig met fotograferen, beeldhouwen en het ontwerpen van praktische objecten, die ik vervolgens print op mijn 3D-printer. In mijn portfolio vindt u onder andere enkele beelden gemaakt van speksteen, en alle foto’s op deze website zijn door mijzelf gemaakt.</p>
+								<p>De opleiding tot product engineer vind ik erg boeiend en ik kijk ernaar uit om in de praktijk aan de slag te gaan, zodat ik kan laten zien wat ik heb geleerd.</p>
+								<p>Neem gerust een kijkje op mijn website en vergeet niet mijn <a href="#work">portfolio</a> te bekijken!</p>
 							</article>
 
-						<!-- Work -->
+						<!-- Portfolio -->
 						<article id="work">
 							<h2 class="major">Portfolio</h2>
 							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
