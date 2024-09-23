@@ -1623,6 +1623,88 @@ input, select, textarea {
 
 		}
 
+/* Styling CV Tijdlijn */
+
+/* Timeline container */
+.timeline {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+	border-left: 2px solid #d0d38f; /* Verticale lijn */
+	padding-left: 2rem;
+}
+
+/* Timeline item (zoals Educatie, Werkervaring, Vaardigheden) */
+.timeline-item {
+	position: relative;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+}
+
+/* Sectietitels */
+.timeline-item h2 {
+	font-size: 1.8rem;
+	color: #ffffff; /* Witte tekst voor de sectietitels */
+	margin-bottom: 1rem;
+}
+
+/* Tekstvakken */
+.timeline-item .content {
+	background-color: rgb(246, 202, 131); /* Donkere, semi-transparante achtergrond */
+	padding: 1rem;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1rem;
+	width: 100%;
+	color: #ffffff; /* Zorgt ervoor dat alle tekst wit is */
+}
+
+/* Hover-effect voor inhoud, iets donkerder */
+.timeline-item .content:hover {
+	background-color: rgb(246, 202, 131); /* Donkerder #0F7173 bij hover */
+}
+
+/* Timeline 'punt' op de lijn */
+.timeline-item:before {
+	content: '';
+	position: absolute;
+	left: -11px;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #d0d38f;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+/* Ongeordende lijst voor Vaardigheden */
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* Lijst items (Vaardigheden) */
+ul li {
+	margin-bottom: 0.5rem;
+	font-size: 1.1rem;
+	color: #ffffff; /* Witte tekst voor de vaardighedenlijst */
+}
+
+/* Hover-effect voor inhoud */
+.timeline-item .content:hover {
+	background-color: rgba(0, 0, 0, 0.85); /* Iets donkerdere achtergrond bij hover */
+}
+
+/* Hover-effect voor titels */
+.timeline-item h2:hover {
+	color: #d0d38f; /* Verandert de titel naar blauw bij hover */
+}
+
+
 /* Portfolio Styles */
 .portfolio {
 	display: grid;
