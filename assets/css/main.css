@@ -1634,7 +1634,7 @@ input, select, textarea {
 	margin: 0 auto;
 	width: 80%;
 	max-width: 1200px;
-	border-left: 2px solid #d0d38f; /* Verticale lijn */
+	border-left: 2px solid #1282a2; /* Verticale lijn */
 	padding-left: 2rem;
 }
 
@@ -1654,7 +1654,7 @@ input, select, textarea {
 
 /* Tekstvakken */
 .timeline-item .content {
-	background-color: rgb(246, 202, 131); /* Donkere, semi-transparante achtergrond */
+	background-color: rgb(162, 50, 18); /* Donkere, semi-transparante achtergrond */
 	padding: 1rem;
 	border-radius: 6px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1665,7 +1665,7 @@ input, select, textarea {
 
 /* Hover-effect voor inhoud, iets donkerder */
 .timeline-item .content:hover {
-	background-color: rgb(246, 202, 131); /* Donkerder #0F7173 bij hover */
+	background-color: rgb(162, 50, 18); /* Donkerder #0F7173 bij hover */
 }
 
 /* Timeline 'punt' op de lijn */
@@ -1676,7 +1676,7 @@ input, select, textarea {
 	top: 10px;
 	width: 20px;
 	height: 20px;
-	background-color: #d0d38f;
+	background-color: #1282a2;
 	border-radius: 50%;
 	border: 2px solid white;
 }
@@ -1701,7 +1701,7 @@ ul li {
 
 /* Hover-effect voor titels */
 .timeline-item h2:hover {
-	color: #d0d38f; /* Verandert de titel naar blauw bij hover */
+	color: #1282a2; /* Verandert de titel naar blauw bij hover */
 }
 
 
