@@ -1689,7 +1689,7 @@ ul {
 
 /* Lijst items (Vaardigheden) */
 ul li {
-	margin-bottom: 0.5rem;
+	margin-bottom: 0rem;
 	font-size: 1.1rem;
 	color: #ffffff; /* Witte tekst voor de vaardighedenlijst */
 }
